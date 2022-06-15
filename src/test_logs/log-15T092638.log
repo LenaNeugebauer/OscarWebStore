@@ -1,0 +1,18 @@
+09:26:41 INFO  com.telran.oscar.utils.MyListener - Start element --> By.id: login_link
+09:26:41 INFO  com.telran.oscar.utils.MyListener - The element with locator --> By.id: login_link --> was found
+09:26:41 INFO  com.telran.oscar.utils.MyListener - Start element --> By.id: id_login-username
+09:26:41 INFO  com.telran.oscar.utils.MyListener - The element with locator --> By.id: id_login-username --> was found
+09:26:41 INFO  com.telran.oscar.utils.MyListener - Start element --> By.id: id_login-username
+09:26:41 INFO  com.telran.oscar.utils.MyListener - The element with locator --> By.id: id_login-username --> was found
+09:26:41 INFO  com.telran.oscar.utils.MyListener - Start element --> By.id: id_login-username
+09:26:41 INFO  com.telran.oscar.utils.MyListener - The element with locator --> By.id: id_login-username --> was found
+09:26:41 INFO  com.telran.oscar.utils.MyListener - Start element --> By.id: id_login-password
+09:26:41 INFO  com.telran.oscar.utils.MyListener - The element with locator --> By.id: id_login-password --> was found
+09:26:41 INFO  com.telran.oscar.utils.MyListener - Start element --> By.id: id_login-password
+09:26:41 INFO  com.telran.oscar.utils.MyListener - The element with locator --> By.id: id_login-password --> was found
+09:26:41 INFO  com.telran.oscar.utils.MyListener - Start element --> By.id: id_login-password
+09:26:41 INFO  com.telran.oscar.utils.MyListener - The element with locator --> By.id: id_login-password --> was found
+09:26:41 INFO  com.telran.oscar.utils.MyListener - Start element --> By.name: login_submit
+09:26:41 INFO  com.telran.oscar.utils.MyListener - The element with locator --> By.name: login_submit --> was found
+09:26:45 INFO  com.telran.oscar.utils.MyListener - Start element --> By.cssSelector: ul.nav.navbar-nav.navbar-right li:nth-child(1) 
+09:26:45 INFO  com.telran.oscar.utils.MyListener - The element with locator --> By.cssSelector: ul.nav.navbar-nav.navbar-right li:nth-child(1)  --> was found
