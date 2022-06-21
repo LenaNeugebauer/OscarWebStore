@@ -67,12 +67,6 @@ public class HomePageTests extends TestBase {
     @Test
     public void checkProductPriceInBasket() {
         homePage.clickOnAddToBasket();
-        for (int i = 0; i < Integer.MAX_VALUE; i++) {
-            int priceAddToBasket = i;
-            int priceBasketTotal = i;
-            if (priceAddToBasket != priceBasketTotal) {
-                System.out.println("Error: The total amount is not equal to the order amount");
-            }
-        }
+        homePage.checkProductPrice();
     }
 }

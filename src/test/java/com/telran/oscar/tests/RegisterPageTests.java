@@ -1,7 +1,7 @@
 package com.telran.oscar.tests;
 
-import com.telran.oscar.pages.HomePage;
-import com.telran.oscar.pages.RegisterPage;
+import com.telran.oscar.pages.home.HomePage;
+import com.telran.oscar.pages.user.RegisterPage;
 import com.telran.oscar.utils.DataProviders;
 import com.telran.oscar.utils.PropertiesLoader;
 import org.openqa.selenium.support.PageFactory;
@@ -9,7 +9,7 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class RegisterTests extends TestBase {
+public class RegisterPageTests extends TestBase {
 
     HomePage homePage;
     RegisterPage registerPage;
@@ -43,7 +43,7 @@ public class RegisterTests extends TestBase {
     }
 
     @Test(dataProviderClass = DataProviders.class, dataProvider = "registrationPositive")
-    public void newUserRegistrationTest(String email, String password) {
+    public void newUserRegistrationPositiveTest(String email, String password) {
         homePage.clickOnLoginAndRegisterLink();
         registerPage.fillRegisterForm(email, password, password);
         Assert.assertTrue(homePage.isLoginMessageDisplayed());

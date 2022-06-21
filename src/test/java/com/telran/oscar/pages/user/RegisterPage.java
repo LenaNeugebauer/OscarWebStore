@@ -1,5 +1,7 @@
-package com.telran.oscar.pages;
+package com.telran.oscar.pages.user;
 
+import com.telran.oscar.pages.home.HomePage;
+import com.telran.oscar.pages.PageBase;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -47,8 +49,8 @@ public class RegisterPage extends PageBase {
     WebElement loginSubmit;
 
     public HomePage fillLoginForm(String email, String password) {
-        type(username,email);
-        type(loginPassword,password);
+        type(username, email);
+        type(loginPassword, password);
         click(loginSubmit);
         return new HomePage(driver);
     }

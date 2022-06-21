@@ -1,7 +1,9 @@
 package com.telran.oscar.pages;
 
 import com.google.common.io.Files;
+import com.telran.oscar.product.AllProductsPage;
 import org.openqa.selenium.*;
+import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
@@ -16,7 +18,7 @@ public class PageBase {
 
     public PageBase(WebDriver driver) {
         this.driver = driver;
-        PageFactory.initElements(driver,this);
+        PageFactory.initElements(driver, this);
     }
 
     public void click(WebElement element) {
@@ -31,9 +33,6 @@ public class PageBase {
         }
     }
 
-    public void shouldHaveText(WebElement element, String text, int time) {
-        new WebDriverWait(driver,time).until(ExpectedConditions.textToBePresentInElement(element,text));
-    }
 
     public void pause(int millis) {
         try {
@@ -44,55 +43,64 @@ public class PageBase {
     }
 
     public void takeScreenshot(String pathToFile) {
-
-        File tmp = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+        File tmp = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
         File screenshot = new File(pathToFile);
 
         try {
-            Files.copy(tmp,screenshot);
+            Files.copy(tmp, screenshot);
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
-    //    public String takeScreenshot() {
-//
-//        File tmp = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-//
-//        File screenshot = new File("screenshots/screen-" + System.currentTimeMillis() + ".png");
-//        try {
-//            Files.copy(tmp, screenshot);
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//        return screenshot.getAbsolutePath();
-//    }
 
-    public void should(WebElement element, int time) {
-        new WebDriverWait(driver,time).until(ExpectedConditions.visibilityOf(element));
+    public void scrollUpOrDown(int x, int y) {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollBy(" + x + "," + y + ")");
     }
 
-    public void scrollUpOrDown(int x, int y){
-        JavascriptExecutor js =(JavascriptExecutor) driver;
-        js.executeScript("window.scrollBy("+ x + ","+ y + ")");
-    }
-
-    public void selectDropDownByValue(WebElement element, String value){
-        Select select = new Select(element);
-        select.selectByValue(value);
-    }
-
-    public boolean isElementClickable(WebElement element, int timeout){
-
+    public boolean isElementClickable(WebElement element, int timeout) {
         WebElement elementTemp = null;
-        try{
-            new WebDriverWait(driver,timeout).until(ExpectedConditions.elementToBeClickable(element));
+        try {
+            new WebDriverWait(driver, timeout).until(ExpectedConditions.elementToBeClickable(element));
             return true;
-
-        }catch (WebDriverException wde){
+        } catch (WebDriverException wde) {
             System.out.println(wde);
         }
-
         return false;
     }
 
+    @FindBy(tagName = "h1")
+    WebElement itemTitle;
+
+    public String getBooksName() {
+        return itemTitle.getText();
+    }
+
+    public void clickWithAction(WebElement elem, int x, int y) {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollBy(" + x + ", " + y + ")");
+        elem.click();
+
+    }
+
+    public void clickWithJSExecutor(WebElement element, int x, int y) {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollBy(" + x + "," + y + ")");
+        element.click();
+
+    }
+
+    public boolean pageTitleDisplayed() {
+        return driver.findElement(By.cssSelector("h1")).isDisplayed();
+    }
+
+    public String getNameOfSelectedProduct(int numberOfProduct) {
+        WebElement element = driver.findElement(By.xpath("//ol[@class='row']/li[" + numberOfProduct + "]//h3"));
+        return element.getText();
+    }
+
+    public void clickOnProduct(int numberOfProduct) {
+        WebElement element = driver.findElement(By.xpath("//ol[@class='row']/li[" + numberOfProduct + "]//div[@class='image_container']"));
+        click(element);
+    }
 }

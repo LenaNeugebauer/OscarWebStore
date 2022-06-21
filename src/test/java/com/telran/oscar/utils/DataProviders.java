@@ -104,4 +104,37 @@ public class DataProviders {
         reader.close();
         return list.iterator();
     }
+
+    @DataProvider
+    public static Iterator<Object[]> booksName() throws IOException {
+        BufferedReader reader = new BufferedReader(new InputStreamReader(
+                DataProviders.class.getResourceAsStream("/booksName.csv")));
+
+        List<Object[]> list = new ArrayList<>();
+        String line = reader.readLine();
+
+        while (line != null) {
+            list.add(line.split(","));
+            line = reader.readLine();
+        }
+        reader.close();
+        return list.iterator();
+    }
+
+    @DataProvider
+    public static Iterator<Object[]> price() throws IOException {
+        BufferedReader reader = new BufferedReader(new InputStreamReader(
+                DataProviders.class.getResourceAsStream("/price.csv")));
+
+        List<Object[]> list = new ArrayList<>();
+        String line = reader.readLine();
+
+        while (line != null) {
+            list.add(line.split(","));
+            line = reader.readLine();
+        }
+        reader.close();
+        return list.iterator();
+    }
+
 }
