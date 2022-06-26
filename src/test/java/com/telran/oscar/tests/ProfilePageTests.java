@@ -1,5 +1,6 @@
 package com.telran.oscar.tests;
 
+import com.telran.oscar.pages.account.ProfilePage;
 import com.telran.oscar.pages.home.HomePage;
 import com.telran.oscar.pages.user.*;
 import com.telran.oscar.utils.PropertiesLoader;

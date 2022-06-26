@@ -1,6 +1,5 @@
 package com.telran.oscar.tests;
 
-import com.telran.oscar.pages.user.ProfilePage;
 import com.telran.oscar.pages.home.HomePage;
 import com.telran.oscar.pages.user.RegisterPage;
 import com.telran.oscar.utils.DataProviders;

@@ -2,13 +2,14 @@ package com.telran.oscar.pages.home;
 
 import com.telran.oscar.pages.PageBase;
 import com.telran.oscar.pages.basket.BasketPage;
-import com.telran.oscar.pages.user.ProfilePage;
+import com.telran.oscar.pages.account.ProfilePage;
 import com.telran.oscar.pages.user.RegisterPage;
 import com.telran.oscar.product.AllProductsPage;
 import com.telran.oscar.product.BooksPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.Select;
 
 public class HomePage extends PageBase {
 
@@ -87,6 +88,11 @@ public class HomePage extends PageBase {
         click(goButton);
     }
 
+    private void selectDropDownByValue(WebElement element, String value) {
+        Select select = new Select(element);
+        select.selectByValue(value);
+    }
+
     @FindBy(id = "id_q")
     WebElement searchField;
 
@@ -145,5 +151,12 @@ public class HomePage extends PageBase {
         return new BooksPage(driver);
     }
 
+    @FindBy(xpath = "//a[@class='btn btn-default']")
+    WebElement viewBasketBtn;
+
+    public BasketPage clickOnViewBasketBtn() {
+        click(viewBasketBtn);
+        return new BasketPage(driver);
+    }
 }
 

@@ -1,6 +1,9 @@
-package com.telran.oscar.pages.user;
+package com.telran.oscar.pages.account;
 
 import com.telran.oscar.pages.PageBase;
+import com.telran.oscar.pages.user.ChangePasswordPage;
+import com.telran.oscar.pages.user.DeleteProfilePage;
+import com.telran.oscar.pages.user.EditProfilePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;

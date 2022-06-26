@@ -7,7 +7,7 @@ import com.telran.oscar.pages.user.RegisterPage;
 import com.telran.oscar.product.AllProductsPage;
 import com.telran.oscar.product.BooksPage;
 import com.telran.oscar.product.InformationProductPage;
-import com.telran.oscar.product.Pre_OrderPage;
+import com.telran.oscar.pages.basket.Pre_OrderPage;
 import com.telran.oscar.utils.DataProviders;
 import com.telran.oscar.utils.PropertiesLoader;
 import org.openqa.selenium.support.PageFactory;

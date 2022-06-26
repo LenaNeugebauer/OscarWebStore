@@ -33,8 +33,9 @@ public class MyListener extends AbstractWebDriverEventListener {
         String pathToScreenshot = "screenshots/screen" + (System.currentTimeMillis()) + ".png";
 
         PageBase pageBase = new PageBase(driver);
-        pageBase.takeScreenshot(pathToScreenshot);
+        //pageBase.takeScreenshot(pathToScreenshot);
 
-        logger.error(pathToScreenshot);
+        //logger.error(pathToScreenshot);
+        logger.error(String.valueOf(new PageBase(driver).takeScreenshotWithScrollDown()));
     }
 }

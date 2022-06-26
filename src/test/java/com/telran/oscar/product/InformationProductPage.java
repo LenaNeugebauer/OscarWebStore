@@ -17,11 +17,7 @@ public class InformationProductPage extends PageBase {
         return productName.getText();
     }
 
-    @FindBy(xpath = "//button[@value='Add to basket']")
-    WebElement addToBasketBtn;
 
-    public InformationProductPage clickOnAddToBasketBtn() {
-        click(addToBasketBtn);
-        return this;
-    }
+
+
 }

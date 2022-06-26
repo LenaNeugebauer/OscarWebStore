@@ -1,14 +1,17 @@
 package com.telran.oscar.pages;
 
 import com.google.common.io.Files;
-import com.telran.oscar.product.AllProductsPage;
+import com.telran.oscar.product.InformationProductPage;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import ru.yandex.qatools.ashot.AShot;
+import ru.yandex.qatools.ashot.Screenshot;
+import ru.yandex.qatools.ashot.shooting.ShootingStrategies;
 
+import javax.imageio.ImageIO;
 import java.io.File;
 import java.io.IOException;
 
@@ -45,7 +48,6 @@ public class PageBase {
     public void takeScreenshot(String pathToFile) {
         File tmp = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
         File screenshot = new File(pathToFile);
-
         try {
             Files.copy(tmp, screenshot);
         } catch (IOException e) {
@@ -102,5 +104,38 @@ public class PageBase {
     public void clickOnProduct(int numberOfProduct) {
         WebElement element = driver.findElement(By.xpath("//ol[@class='row']/li[" + numberOfProduct + "]//div[@class='image_container']"));
         click(element);
+    }
+
+    public Screenshot takeScreenshotWithScrollDown() {
+        Screenshot screenshot = new AShot().shootingStrategy(ShootingStrategies.viewportPasting(ShootingStrategies.scaling(1.5f), 1000)).takeScreenshot(driver);
+        try {
+            ImageIO.write(screenshot.getImage(), "png", new File("screenshots/screen" + System.currentTimeMillis() + ".png"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return screenshot;
+    }
+
+    @FindBy(xpath = "//div[2]/form/button")
+    WebElement addToBasketBtn;
+
+    public InformationProductPage clickOnAddToBasketBtn() {
+        click(addToBasketBtn);
+        return new InformationProductPage(driver);
+    }
+
+
+    public void clickOnAddToBasketButton(int productNumber) {
+        WebElement element = driver.findElement(By.xpath("//ol[@class='row']/li[" + productNumber + "]//button[@type='submit']"));
+        click(element);
+    }
+
+    public String getPriceOfChosenProduct(int numberOfProduct) {
+        WebElement element = driver.findElement(By.xpath("//ol[@class='row']/li[" + numberOfProduct + "]//p[@class='price_color']"));
+        return removeFirstChar(element.getText());
+    }
+
+    public String removeFirstChar(String s) {
+        return s.substring(1);
     }
 }
