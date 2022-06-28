@@ -30,6 +30,7 @@
      - Price
      - Availability
      - The number of goods for each item
+     ![bandicam 2022-06-28 21-02-52-009](https://user-images.githubusercontent.com/92040264/176261971-0cf39836-01f9-4e69-a0fb-a18861e998c1.jpg)
 4. You can order two types of goods:
      - Clothing
      - Books
