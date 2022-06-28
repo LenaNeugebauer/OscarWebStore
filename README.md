@@ -37,6 +37,7 @@
      - Creation of a new order with an arbitrary number of goods of different names.
      - It should be possible for the user to view all his orders sorted by the filter.
        The filter contains the following fields: Order number, Amount, Creation date and Quantity of items in the order.
+       ![bandicam 2022-06-28 21-00-53-750](https://user-images.githubusercontent.com/92040264/176261641-3d7ac893-7cc9-435a-80a0-6336b04f7483.jpg)
  6. Additional requirements:
     - The system interface should consist of two parts - a header with a menu for accessing the system and workspace functions.
     - When creating a document, implement validation of input attributes both on the client side and on the server side.
