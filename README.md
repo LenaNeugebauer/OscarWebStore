@@ -21,23 +21,21 @@
 
 ### Welcome to Oscar's sandbox site.  This is a example install of Oscar, making very few customisations to the core.  It is intended as a playground for experimenting with Oscar's features. ###
 
-1. The system should be the simplest example of an online store.
-2. To get started, the user must authorize himself or enter as a guest
-3. The Product must have the following attributes:
-     - Unique number(string)
-     - Name of product
-     - Price
-     - Availability
-     - The number of goods for each item
-     ![bandicam 2022-06-28 21-02-52-009](https://user-images.githubusercontent.com/92040264/176261971-0cf39836-01f9-4e69-a0fb-a18861e998c1.jpg)
-4. You can order two types of goods:
-     - Clothing
-     - Books
-5. System functions:
-     - Creation of a new order with an arbitrary number of goods of different names.
-     - It should be possible for the user to view all his orders sorted by the filter.
-       The filter contains the following fields: Order number, Amount, Creation date and Quantity of items in the order.
-       ![bandicam 2022-06-28 21-00-53-750](https://user-images.githubusercontent.com/92040264/176261641-3d7ac893-7cc9-435a-80a0-6336b04f7483.jpg)
+Project stages:
+- Development of testing strategy.
+- Test documentation
+- Testing 
+     
+The purpose of this Test Plan is to describe the testing process, purpose, assessment, result, resources required for testing. Due to the fact that I know my project well, I did not make the Test Case redundant. I briefly outlined the steps so that another tester or other specialist can quickly go through it and check that everything is working as it should. In the Checklist, I very simply included a list of checks for the tested product. It contains a list of blocks, sections and elements to be tested.
+
+https://bit.ly/3bBt2Vf
+
+After localizing and checking the bugs on multiple devices and operating systems, the bugs were submitted to the Jira 8.22.0 system, where bug reports are captured and stored. The bug report describes the problems (what, where, when it happened), the importance of the defect, playback conditions, playback algorithm and evidence (screenshots, videos, logs).
+
+As a ready-made module for writing a test, I used the testNG framework written in Java 11.0.12 and loaded the dependencies.
+
+To test the code and run continuous integration, the Jenkins tool was used through port 8080 using a command like this:
+
  6. Additional requirements:
     - The system interface should consist of two parts - a header with a menu for accessing the system and workspace functions.
     - When creating a document, implement validation of input attributes both on the client side and on the server side.
