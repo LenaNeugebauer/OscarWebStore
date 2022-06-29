@@ -32,6 +32,8 @@ https://bit.ly/3bBt2Vf
 
 After localizing and checking the bugs on multiple devices and operating systems, the bugs were submitted to the Jira 8.22.0 system, where bug reports are captured and stored. The bug report describes the problems (what, where, when it happened), the importance of the defect, playback conditions, playback algorithm and evidence (screenshots, videos, logs).
 
+![bandicam 2022-06-29 14-30-24-847](https://user-images.githubusercontent.com/92040264/176486937-cecf4f18-f2ba-415c-b29e-ed46f54adf04.jpg)
+
 As a ready-made module for writing a test, I used the testNG framework written in Java 11.0.12 and loaded the dependencies.
 
 To test the code and run continuous integration, the Jenkins tool was used through port 8080 using a command like this:
