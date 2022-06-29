@@ -34,7 +34,7 @@ After localizing and checking the bugs on multiple devices and operating systems
 
 ![bandicam 2022-06-29 14-30-24-847](https://user-images.githubusercontent.com/92040264/176486937-cecf4f18-f2ba-415c-b29e-ed46f54adf04.jpg)
 
-As a ready-made module for writing a test, I used the testNG framework written in **Java 11.0.12** and loaded the dependencies.
+As a ready-made module for writing a test, I used the TestNG framework written in **Java 11.0.12** and loaded the dependencies.
 
 ![bandicam 2022-06-29 17-01-16-175](https://user-images.githubusercontent.com/92040264/176487229-35ff53d8-af3a-44c7-922d-439ec1d03176.jpg)
 
