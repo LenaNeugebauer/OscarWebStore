@@ -26,20 +26,20 @@ Project stages:
 - Test documentation
 - Testing 
      
-The purpose of this Test Plan is to describe the testing process, purpose, assessment, result, resources required for testing. Due to the fact that I know my project well, I did not make the Test Case redundant. I briefly outlined the steps so that another tester or other specialist can quickly go through it and check that everything is working as it should. In the Checklist, I very simply included a list of checks for the tested product. It contains a list of blocks, sections and elements to be tested.
+The purpose of this **Test Plan** is to describe the testing process, purpose, assessment, result, resources required for testing. Due to the fact that I know my project well, I did not make the **Test Case** redundant. I briefly outlined the steps so that another tester or other specialist can quickly go through it and check that everything is working as it should. In the **Checklist** , I very simply included a list of checks for the tested product. It contains a list of blocks, sections and elements to be tested.
 
 https://bit.ly/3bBt2Vf - *documentation*
 
-After localizing and checking the bugs on multiple devices and operating systems, the bugs were submitted to the Jira 8.22.0 system, where bug reports are captured and stored. The bug report describes the problems (what, where, when it happened), the importance of the defect, playback conditions, playback algorithm and evidence (screenshots, videos, logs).
+After localizing and checking the bugs on multiple devices and operating systems, the bugs were submitted to the **Jira 8.22.0** system, where bug reports are captured and stored. The bug report describes the problems (what, where, when it happened), the importance of the defect, playback conditions, playback algorithm and evidence (screenshots, videos, logs).
 
 ![bandicam 2022-06-29 14-30-24-847](https://user-images.githubusercontent.com/92040264/176486937-cecf4f18-f2ba-415c-b29e-ed46f54adf04.jpg)
 
-As a ready-made module for writing a test, I used the testNG framework written in Java 11.0.12 and loaded the dependencies.
+As a ready-made module for writing a test, I used the testNG framework written in **Java 11.0.12** and loaded the dependencies.
 
 ![bandicam 2022-06-29 17-01-16-175](https://user-images.githubusercontent.com/92040264/176487229-35ff53d8-af3a-44c7-922d-439ec1d03176.jpg)
 
 
-To test the code and run continuous integration, the Jenkins tool was used through port 8080 using a command like this:
+To test the code and run continuous integration, the **Jenkins** tool was used through port 8080 using a command like this:
   
   *java -jar jenkins.war* 
 
