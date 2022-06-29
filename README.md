@@ -40,6 +40,9 @@ As a ready-made module for writing a test, I used the testNG framework written i
 
 
 To test the code and run continuous integration, the Jenkins tool was used through port 8080 using a command like this:
+  
+  *java -jar jenkins.war* 
+
 
  6. Additional requirements:
     - The system interface should consist of two parts - a header with a menu for accessing the system and workspace functions.
