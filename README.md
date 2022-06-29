@@ -44,10 +44,4 @@ To test the code and run continuous integration, the Jenkins tool was used throu
   *java -jar jenkins.war* 
 
 
- 6. Additional requirements:
-    - The system interface should consist of two parts - a header with a menu for accessing the system and workspace functions.
-    - When creating a document, implement validation of input attributes both on the client side and on the server side.
-    - The internal design of the application must be developed in accordance with the principles of OOP
-    - Integration of the application object model must be done using an object-relational mapping framework of your choice
-    - When implementing asynchronous calls, use the standard library
-    - Use PostgreSQL as a database.
+
