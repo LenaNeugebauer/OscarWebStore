@@ -36,6 +36,9 @@ After localizing and checking the bugs on multiple devices and operating systems
 
 As a ready-made module for writing a test, I used the testNG framework written in Java 11.0.12 and loaded the dependencies.
 
+![bandicam 2022-06-29 17-01-16-175](https://user-images.githubusercontent.com/92040264/176487229-35ff53d8-af3a-44c7-922d-439ec1d03176.jpg)
+
+
 To test the code and run continuous integration, the Jenkins tool was used through port 8080 using a command like this:
 
  6. Additional requirements:
